@@ -138,7 +138,7 @@
           var checkLink = bannerWrap.querySelector('a');
           var br = doc.createElement('br');
           var img = doc.createElement('img');
-          img.src = src ? src : 'http://i.imgur.com/Cx7gGUX.gif';
+          img.src = src ? src : 'https://rdm.sfo2.digitaloceanspaces.com/silo/weston/logo/v2-weston-signature_banner.gif';
           img.classList.add('image');
           img.width = '600';
           img.height = '60';
