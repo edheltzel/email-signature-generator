@@ -103,7 +103,7 @@
     node.appendChild(br);
   }
   checkIcons.addEventListener('click', function () {
-    this.checked ? addIcons() : removeIcons();
+    this.checked ? removeIcons() : addIcons();
   });
   function removeIcons() {
     savedNode = tableSignature.removeChild(
