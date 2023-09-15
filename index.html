@@ -83,9 +83,9 @@
                 </div>
                 <div class="field-body">
                   <div class="field has-addons has-addons-centered">
-                    <p class="">
+                    <p class="control">
                       <label class="button is-static" title="Check when need insert skype">
-                        <input id="checkSkype" type="checkbox" disabled style="cursor: not-allowed;" />
+                        <input id="checkSkype" type="checkbox" />
                       </label>
                     </p>
                     <p class="control is-expanded">
@@ -93,7 +93,7 @@
                     </p>
                   </div>
                 </div>
-              </div> -->
+              </div>
               <div class="field is-horizontal">
                 <div class="field-label is-normal">
                   <label class="label" for="email">Email:</label>
@@ -101,7 +101,7 @@
                 <div class="field-body">
                   <div class="field has-addons has-addons-centered">
                     <p class="control is-expanded">
-                      <input id="email" class="input" placeholder="name@westonandassociates.com" />
+                      <input id="email" class="input" placeholder="name@westonacllc.com" />
                     </p>
                   </div>
                 </div>
@@ -114,7 +114,7 @@
                   <div class="field has-addons has-addons-centered">
                     <p class="control">
                       <label class="button is-static">
-                        <input id="checkIcons" type="checkbox" disabled />
+                        <input id="checkIcons" type="checkbox" />
                       </label>
                     </p>
                     <p class="control is-expanded">
@@ -131,7 +131,7 @@
                   <div class="field has-addons has-addons-centered">
                     <p class="control">
                       <label class="button is-static">
-                        <input id="checkLogo" type="checkbox" disabled />
+                        <input id="checkLogo" type="checkbox" />
                       </label>
                     </p>
                     <p class="control is-expanded">
@@ -191,7 +191,7 @@
                       <input id="image" class="input" placeholder="https://i.imgur.com/xnLswkr.gif" disabled />
                       <span class="help">
                         Have a your own banner? Paste in the URL here or <br>
-                        Use <a href="https://imgur.com/">imgur.com</a> to host you images.
+                        Use <a href="https://imgur.com/">imgur.com</a> to hosting images
 
                       </span>
                     </p>
@@ -249,16 +249,16 @@
                         <div id="phoneWrap"></div>
                         <!-- <div id="skypeWrap"></div> -->
                         <span style="white-space: nowrap;">
-                          <a class="email" href="mailto:name@westonandassociates.com" style="
+                          <a class="email" href="mailto:name@gmail.com" style="
                               color: rgb(12, 15, 17);
                               text-decoration: none;
                             ">
-                            name@westonandassociates.com
+                            name@gmail.com
                           </a>
                         </span>
                         <br />
                         <br />
-                        <span style="white-space: nowrap; display:none;" id="logoWrap">
+                        <span style="white-space: nowrap;" id="logoWrap">
                           <img src="" class="logo" />
                         </span>
                         <div id="imageWrap"></div>
@@ -519,7 +519,7 @@
           var checkLink = bannerWrap.querySelector('a');
           var br = doc.createElement('br');
           var img = doc.createElement('img');
-          img.src = src ? src : 'https://rdm.sfo2.digitaloceanspaces.com/silo/weston/logo/v2-weston-signature_banner.gif';
+          img.src = src ? src : 'https://i.imgur.com/biz9i8t.gif';
           img.classList.add('image');
           img.width = '600';
           img.height = '60';
