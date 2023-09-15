@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weston & Associates Email Signature Generator</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.min.css"
-    />
-    <style>.message.is-primary{background-color: white !important;}</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.min.css" />
+    <style>
+      .message.is-primary {
+        background-color: white !important;
+      }
+    </style>
   </head>
+
   <body>
     <section class="section">
       <div class="container">
@@ -40,11 +43,7 @@
                 <div class="field-body">
                   <div class="field has-addons has-addons-centered">
                     <p class="control is-expanded">
-                      <input
-                        id="name"
-                        class="input"
-                        placeholder="First & Last Name"
-                      />
+                      <input id="name" class="input" placeholder="First & Last Name" />
                     </p>
                   </div>
                 </div>
@@ -56,11 +55,7 @@
                 <div class="field-body">
                   <div class="field has-addons has-addons-centered">
                     <p class="control is-expanded">
-                      <input
-                        id="position"
-                        class="input"
-                        placeholder="This is what I do"
-                      />
+                      <input id="position" class="input" placeholder="This is what I do" />
                     </p>
                   </div>
                 </div>
@@ -72,45 +67,29 @@
                 <div class="field-body">
                   <div class="field has-addons has-addons-centered">
                     <p class="control">
-                      <label
-                        class="button is-static"
-                        title="Check when need insert phone"
-                      >
+                      <label class="button is-static" title="Check when need insert phone">
                         <input id="checkPhone" type="checkbox" />
                       </label>
                     </p>
                     <p class="control is-expanded">
-                      <input
-                        id="phone"
-                        class="input"
-                        placeholder="(937) 555-5555"
-                        disabled
-                      />
+                      <input id="phone" class="input" placeholder="(937) 555-5555" disabled />
                     </p>
                   </div>
                 </div>
               </div>
-              <div class="field is-horizontal">
+              <div class="field is-horizontal is-hidden">
                 <div class="field-label is-normal">
                   <label class="label" for="checkSkype">Skype:</label>
                 </div>
                 <div class="field-body">
                   <div class="field has-addons has-addons-centered">
-                    <p class="control">
-                      <label
-                        class="button is-static"
-                        title="Check when need insert skype"
-                      >
-                        <input id="checkSkype" type="checkbox" />
+                    <p class="">
+                      <label class="button is-static" title="Check when need insert skype">
+                        <input id="checkSkype" type="checkbox" disabled style="cursor: not-allowed;" />
                       </label>
                     </p>
                     <p class="control is-expanded">
-                      <input
-                        id="skype"
-                        class="input"
-                        placeholder="skypename"
-                        disabled
-                      />
+                      <input id="skype" class="input" placeholder="skypename" disabled />
                     </p>
                   </div>
                 </div>
@@ -122,11 +101,7 @@
                 <div class="field-body">
                   <div class="field has-addons has-addons-centered">
                     <p class="control is-expanded">
-                      <input
-                        id="email"
-                        class="input"
-                        placeholder="name@westonacllc.com"
-                      />
+                      <input id="email" class="input" placeholder="name@westonandassociates.com" />
                     </p>
                   </div>
                 </div>
@@ -143,12 +118,7 @@
                       </label>
                     </p>
                     <p class="control is-expanded">
-                      <input
-                        id="network"
-                        class="input"
-                        placeholder="Hide social icons?"
-                        disabled
-                      />
+                      <input id="network" class="input" placeholder="Hide social icons?" disabled />
                     </p>
                   </div>
                 </div>
@@ -165,12 +135,7 @@
                       </label>
                     </p>
                     <p class="control is-expanded">
-                      <input
-                        id="logo"
-                        class="input"
-                        placeholder="Hide logo?"
-                        disabled
-                      />
+                      <input id="logo" class="input" placeholder="Hide logo?" disabled />
                     </p>
                   </div>
                 </div>
@@ -218,20 +183,12 @@
                 <div class="field-body">
                   <div class="field has-addons has-addons-centered">
                     <p class="control">
-                      <label
-                        class="button is-static"
-                        title="Check when need insert banner"
-                      >
+                      <label class="button is-static" title="Check when need insert banner">
                         <input id="checkImage" type="checkbox" />
                       </label>
                     </p>
                     <p class="control is-expanded">
-                      <input
-                        id="image"
-                        class="input"
-                        placeholder="https://i.imgur.com/xnLswkr.gif"
-                        disabled
-                      />
+                      <input id="image" class="input" placeholder="https://i.imgur.com/xnLswkr.gif" disabled />
                       <span class="help">
                         Have a your own banner? Paste in the URL here or <br>
                         Use <a href="https://imgur.com/">imgur.com</a> to hosting images
@@ -244,54 +201,47 @@
             </form>
           </div>
           <div class="column">
-            <h3 class="title" >
+            <h3 class="title">
               Preview:
             </h3>
-              <span class="control" id="company" style="display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: .4rem; padding-bottom: 1rem;">
-                <span class="radio" style="display: none"></span>
-                <label class="radio">
-                  <input type="radio" name="company" value="weston" checked />
-                  Weston
-                </label>
-                <label class="radio" style="grid-column: span 2;">
-                  <input type="radio" name="company" value="spbw" />
-                  Speciality Products
-                </label>
-                <label class="radio">
-                  <input type="radio" name="company" value="ssl" />
-                  Sur-Seal Liners
-                </label>
-                <label class="radio">
-                  <input type="radio" name="company" value="ssc" />
-                  Sur-Seal Covers
-                </label>
-                <label class="radio">
-                  <input type="radio" name="company" value="eb" />
-                  Enviro-Box
-                </label>
-              </span>
+            <span class="control" id="company"
+              style="display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: .4rem; padding-bottom: 1rem;">
+              <span class="radio" style="display: none"></span>
+              <label class="radio">
+                <input type="radio" name="company" value="weston" checked />
+                Weston
+              </label>
+              <label class="radio" style="grid-column: span 2;">
+                <input type="radio" name="company" value="spbw" />
+                Speciality Products
+              </label>
+              <label class="radio">
+                <input type="radio" name="company" value="ssl" />
+                Sur-Seal Liners
+              </label>
+              <label class="radio">
+                <input type="radio" name="company" value="ssc" />
+                Sur-Seal Covers
+              </label>
+              <label class="radio">
+                <input type="radio" name="company" value="eb" />
+                Enviro-Box
+              </label>
+            </span>
             <article class="message is-primary">
               <div class="message-body" id="signature_container">
                 <table cellspacing="0" cellpadding="0" id="signature">
                   <tbody>
                     <tr>
-                      <td
-                        style="
+                      <td style="
                           padding-left: 10px;
                           color: rgb(12, 15, 17);
                           font-family: Helvetica, Arial, sans-serif;
                           font-size: 12px;
                           line-height: 16px;
-                        "
-                        colspan="2"
-                      >
-                        <span
-                          class="name"
-                          id="preparedName"
-                          style="color: rgb(46, 113, 183); font-weight: bold;"
-                        >
-                          Name </span
-                        ><br />
+                        " colspan="2">
+                        <span class="name" id="preparedName" style="color: rgb(46, 113, 183); font-weight: bold;">
+                          Name </span><br />
                         <span class="position">
                           Fancy Job Title...
                         </span>
@@ -299,15 +249,11 @@
                         <div id="phoneWrap"></div>
                         <!-- <div id="skypeWrap"></div> -->
                         <span style="white-space: nowrap;">
-                          <a
-                            class="email"
-                            href="mailto:name@gmail.com"
-                            style="
+                          <a class="email" href="mailto:name@westonandassociates.com" style="
                               color: rgb(12, 15, 17);
                               text-decoration: none;
-                            "
-                          >
-                            name@gmail.com
+                            ">
+                            name@westonandassociates.com
                           </a>
                         </span>
                         <br />
@@ -320,33 +266,21 @@
                       </td>
                     </tr>
                     <tr>
-                      <td
-                        style="
+                      <td style="
                           padding-left: 10px;
                           white-space: nowrap;
                           vertical-align: middle;
-                        "
-                      >
-                        <font size="4" color="rgb(12, 15, 17)" face="Arial"
-                          >Follow us:&nbsp;</font
-                        >
+                        ">
+                        <font size="4" color="rgb(12, 15, 17)" face="Arial">Follow us:&nbsp;</font>
                         <span class="Apple-converted-space"></span>
                       </td>
                       <td style="vertical-align: middle;">
-                        <a
-                          style="
+                        <a style="
                             text-decoration: none;
                             color: transparent;
                             margin-top: 5px;
-                          "
-                          class="facebook"
-                          href="https://www.facebook.com/westonacllc/"
-                          ><img
-                            shrinktofit="true"
-                            src="https://i.imgur.com/PgoTAbI.png"
-                            height="24"
-                            width="24"
-                        /></a>
+                          " class="facebook" href="https://www.facebook.com/westonacllc/"><img shrinktofit="true"
+                            src="https://i.imgur.com/PgoTAbI.png" height="24" width="24" /></a>
 
                         <!-- <span class="Apple-converted-space">&nbsp;</span>
                         <a
@@ -365,20 +299,12 @@
                         /></a> -->
 
                         <span class="Apple-converted-space">&nbsp;</span>
-                        <a
-                          style="
+                        <a style="
                             text-decoration: none;
                             color: transparent;
                             margin-top: 5px;
-                          "
-                          class="linkedin"
-                          href="https://www.linkedin.com/company/weston-and-associates-llc"
-                          ><img
-                            shrinktofit="true"
-                            src="https://i.imgur.com/x8x6L3X.png"
-                            height="24"
-                            width="24"
-                        /></a>
+                          " class="linkedin" href="https://www.linkedin.com/company/weston-and-associates-llc"><img
+                            shrinktofit="true" src="https://i.imgur.com/x8x6L3X.png" height="24" width="24" /></a>
                       </td>
                     </tr>
                   </tbody>
@@ -387,11 +313,7 @@
             </article>
             <h3 class="title">Signatures:</h3>
             <div class="controls">
-              <button
-                class="button is-primary"
-                data-select
-                data-signature="signature"
-              >
+              <button class="button is-primary" data-select data-signature="signature">
                 Select Signature (for Gmail)
               </button>
               <!-- <button
@@ -427,9 +349,7 @@
                   <p>
                     Visit help page
                     <a
-                      href="https://support.google.com/mail/answer/8395?co=GENIE.Platform%3DDesktop&hl=en"
-                      >https://support.google.com/mail/answer/8395?co=GENIE.Platform%3DDesktop&amp;hl=en</a
-                    >
+                      href="https://support.google.com/mail/answer/8395?co=GENIE.Platform%3DDesktop&hl=en">https://support.google.com/mail/answer/8395?co=GENIE.Platform%3DDesktop&amp;hl=en</a>
                   </p>
                   <p>
                     Or below is a quick gif that illustrates the steps above.
@@ -679,4 +599,5 @@
       })(window);
     </script>
   </body>
+
 </html>
