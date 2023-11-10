@@ -1,0 +1,238 @@
+@use "sass:color";
+
+:root {
+  --primary: #00A0FF;
+  --secondary: #333333;
+  --gray: #eeeeee;
+  --white: #ffffff;
+  --spacing: 1rem;
+
+  --icon-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{to-rgb(black)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+
+  --icon-chevron-button: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{to-rgb(white)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 2.5rem;
+  background: var(--gray);
+  font-family: system-ui, sans-serif;
+}
+
+hr {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+main {
+  width: 100%;
+  max-width: 90ch;
+  margin: 0 auto;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+}
+
+details {
+  text-align: left;
+
+  p {
+    margin: 1rem 0;
+  }
+}
+
+footer {
+  display: block;
+  text-align: center;
+  margin: 2rem 0;
+  padding: 1rem 0;
+
+  small {
+    font-size: xx-small;
+  }
+}
+
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.generator {
+  margin: 0 auto;
+
+  .title {
+    margin-bottom: 2.5rem;
+    text-align: center;
+    color: var(--secondary);
+    line-height: 1.5
+  }
+}
+
+.form {
+  width: 100%;
+
+  label {
+    text-align: left;
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+
+  input {
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
+
+input {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 1rem 0.5rem;
+  border: 1px solid lighten($color: #000000, $amount: 80%);
+  border-radius: 4px;
+}
+
+.signature {
+  width: 100%;
+  padding: 1.25rem;
+  padding-bottom: 1.5rem;
+  background: var(--white);
+  border-radius: 4px;
+  text-align: left;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.copy-btn {
+  border: 0;
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  background: var(--secondary);
+  color: var(--white);
+  border-radius: 4px;
+  margin-top: 1rem;
+  transition: all ease 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--primary)
+  }
+}
+
+.reset-btn {
+  @extend .copy-btn;
+  border: 1px solid lighten($color: #000000, $amount: 80%);
+  background: transparent;
+  color: lighten($color: #000000, $amount: 50%);
+  transition: all ease 0.2s;
+
+  &:hover {
+    border-color: var(--secondary);
+    background: var(--secondary);
+    color: var(--white);
+  }
+}
+
+#notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  display: none;
+
+  transition: opacity 0.5s;
+}
+
+/**
+ * Accordion (<details>)
+ */
+
+
+
+details {
+  --details-padding: 1rem;
+
+  font-size: 1rem;
+  margin: 1rem auto;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  background: #ffffff;
+  border-radius: 8px;
+  position: relative;
+
+  .summary-title {
+    user-select: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .summary-content {
+    border-top: 1px solid #e2e8f0;
+    cursor: default;
+    padding: calc(var(--details-padding) * 2.5);
+    padding-top: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+
+    p {
+      margin: 1rem 0;
+    }
+
+    li {
+      margin: 0.5rem 0;
+    }
+  }
+
+  summary {
+    list-style: none;
+    padding: var(--details-padding);
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover .summary-chevron-up svg {
+      opacity: 1;
+    }
+  }
+
+  .summary-chevron-up svg {
+    opacity: 0.5;
+  }
+
+  .summary-chevron-up,
+  .summary-chevron-down {
+    pointer-events: none;
+    position: absolute;
+    top: 0.75em;
+    right: var(--details-padding);
+    background: #ffffff;
+
+    svg {
+      display: block;
+    }
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+}

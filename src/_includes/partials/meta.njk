@@ -1,0 +1,20 @@
+{%- set pageTitle -%}
+{% if title %}{{ title }} |{% endif %}
+{{ site.title }}{% endset -%}
+{%- set pageDescription %}
+{% if description %}{{ description }}
+{% else %}{{ site.description }}
+{% endif %}{%- endset -%}
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>{{ pageTitle }}</title>
+<meta name="description" content="{{ pageDescription }}"/>
+<meta name="generator" content="{{ eleventy.generator }}">
+<meta name="generator" content="{{ pkg.name }} v{{ pkg.version }}">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22
+        font-size=%2290%22>🇼</text></svg>"/>
+<meta rel="canonical" href="{{ page.url | baseUrl }}"/>
+<link rel="stylesheet" href="/assets/styles/style.css"/>
+<script src="https://kit.fontawesome.com/63d56c4f3b.js" crossorigin="anonymous"></script>

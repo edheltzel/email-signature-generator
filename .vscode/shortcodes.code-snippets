@@ -1,0 +1,64 @@
+{
+  "Embed Codepens By Url": {
+    "prefix": [
+      "codepen"
+    ],
+    "body": [
+      "{% codepen \"${1:Url}\", ${2:Height}, \"${3:Tabs}\", \"${4:ThemeID}\" %}"
+    ],
+     "scope": "markdown,html,liquid,nunjucks,webc",
+    "description": "Eleventy Shortcode to embed Codepens by URL. Url is required – Optional: Height (must be a number), Tabs, ThemeID"
+  },
+  "Add Copyright Year": {
+    "prefix": [
+      "copyright"
+    ],
+    "body": [
+      "{% year %}"
+    ],
+     "scope": "markdown,html,liquid,nunjucks,webc",
+    "description": "adds ©️ with current calendar year"
+  },
+  "Add Version Number": {
+    "prefix": [
+      "version"
+    ],
+    "body": [
+      "{% version %}"
+    ],
+    "description": "adds the package.json version number",
+    "scope": "markdown,html,liquid,nunjucks,webc"
+
+  },
+  "Add thefold tag": {
+    "prefix": [
+      "thefold"
+    ],
+    "body": [
+      "{% thefold %}"
+    ],
+     "scope": "markdown,html,liquid,nunjucks,webc",
+    "description": "adds <thefold></thefold> for jampack optimization"
+  },
+  "Component: Blockquote with citation": {
+    "prefix": [
+      "blockquote"
+    ],
+    "body": [
+      "{% blockquote \"${1:Quote}\", \"${2:source}\" %}"
+    ],
+    "description": "adds a blockquote with citation using the {% blockquote %} shortcode",
+    "scope": "markdown,html,liquid,nunjucks,webc"
+
+  },
+  "Component: Button for links": {
+    "prefix": [
+      "button"
+    ],
+    "body": [
+      "{% button \"${1:url}\", \"${2:label}\" %}"
+    ],
+    "description": "adds a button that links to internal/external urls using the {% button %} shortcode",
+    "scope": "markdown,html,liquid,nunjucks,webc"
+
+}

@@ -1,0 +1,5 @@
+{
+  "layout": "layouts/page.njk",
+  "tags": "pages",
+  "permalink": "/{{ title | slugify }}/index.html"
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+  <head>
+    {%- include "partials/meta.njk" -%}
+  </head>
+
+  <body>
+    <!-- Main-->
+    <main aria-label="Content">
+
+      {%- block main %}{% endblock -%}
+
+      {% include "partials/footer.njk" %}
+    </main>
+    <!-- End Main -->
+    {% include "partials/scripts.njk" %}
+  </body>
+
+</html>

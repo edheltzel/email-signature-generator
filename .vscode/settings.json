@@ -1,0 +1,47 @@
+{
+  "cSpell.customDictionaries": {
+    "custom-dictionary-workspace": {
+      "addWords": true,
+      "name": "custom-dictionary-workspace",
+      "path": "${workspaceFolder:flightdeck-for-eleventy}/.vscode/cspell-custom-dictionary-workspace.txt",
+      "scope": "workspace"
+    }
+  },
+  "cSpell.words": [
+    "alpinejs",
+    "cleancache",
+    "Coupé",
+    "divriots",
+    "flightdeck",
+    "Heltzel",
+    "kleur",
+    "Laserwave",
+    "postbuild",
+    "thefold",
+    "vgscursor"
+  ],
+  "emmet.includeLanguages": {
+    "*.njk": "html"
+  },
+  "files.exclude": {
+    "**/.sass-cache/": true,
+    "**/_site/": false,
+    "**/dist/": false,
+    "node_modules/": false
+  },
+  "search.exclude": {
+    "**/.publish/": true,
+    "**/.sass-cache/": true,
+    "**/css/*": true,
+    "*.lock": true,
+    ".vscode/**": true,
+    "_site/**": true,
+    "dist/**": true,
+    "node_modules/": true,
+    "package-lock.json": true
+  },
+  "workbench.colorCustomizations": {
+    "statusBar.foreground": "#000",
+    "statusBar.background": "#9ed5f9"
+  }
+}

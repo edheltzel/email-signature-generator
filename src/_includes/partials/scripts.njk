@@ -1,0 +1,34 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+<script src="/assets/js/app.js"></script>
+<script>
+  function copyToClip(str) {
+    function listener(e) {
+      e
+        .clipboardData
+        .setData("text/html", str);
+      e
+        .clipboardData
+        .setData("text/plain", str);
+      e.preventDefault();
+      showNotification("Your email signature has been copied!");
+    }
+    document.addEventListener("copy", listener);
+    document.execCommand("copy");
+    document.removeEventListener("copy", listener);
+  }
+
+  function showNotification(message) {
+    var notification = document.getElementById('notification');
+    notification.textContent = message;
+    notification.style.display = 'block';
+    notification.style.opacity = '1';
+    setTimeout(function () {
+      notification.style.opacity = '0';
+      setTimeout(function () {
+        notification.style.display = 'none';
+      }, 500);
+    }, 2000);
+  }
+</script>
+
+<div id="notification"></div>
