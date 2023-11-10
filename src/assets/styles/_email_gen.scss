@@ -54,6 +54,10 @@ footer {
   text-align: center;
   margin: 2rem 0;
   padding: 1rem 0;
+
+  small {
+    font-size: xx-small;
+  }
 }
 
 
@@ -191,6 +195,10 @@ details {
 
     p {
       margin: 1rem 0;
+    }
+
+    li {
+      margin: 0.5rem 0;
     }
   }
 
