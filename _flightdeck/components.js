@@ -5,8 +5,9 @@
  *
  */
 const button = require("./components/buttonLink");
-const version = require("./components/flightdeck-version");
+const flightdeck = require("./components/flightdeck-info");
 module.exports = (config) => {
   config.addShortcode("button", button);
-  config.addShortcode("version", version);
+  config.addShortcode("version", flightdeck.fdVersion);
+  config.addShortcode("repo", flightdeck.fdUrl);
 };

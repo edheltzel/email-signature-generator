@@ -47,3 +47,30 @@ resetBtn.addEventListener("click", () => {
   resetForm();
   fillDummySignature();
 });
+
+document.getElementById('popup').addEventListener('click', function(event) {
+  event.preventDefault();
+
+  var popup = document.createElement('div');
+  popup.style.position = 'fixed';
+  popup.style.top = '0';
+  popup.style.left = '0';
+  popup.style.width = '100%';
+  popup.style.height = '100%';
+  popup.style.backgroundColor = 'rgba(0,0,0,0.7)';
+  popup.style.display = 'flex';
+  popup.style.justifyContent = 'center';
+  popup.style.alignItems = 'center';
+
+  var img = document.createElement('img');
+  img.src = this.href;
+  img.style.width = 'auto';
+  img.style.objectFit = 'contain';
+
+  popup.appendChild(img);
+  document.body.appendChild(popup);
+
+  popup.addEventListener('click', function() {
+    document.body.removeChild(popup);
+  });
+});

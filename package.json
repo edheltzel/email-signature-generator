@@ -2,6 +2,10 @@
   "name": "flightdeck-for-eleventy",
   "version": "0.3.6",
   "author": "Ed Heltzel",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edheltzel/flightdeck-for-11ty-esbuild"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
