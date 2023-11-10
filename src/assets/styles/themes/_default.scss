@@ -1,0 +1,58 @@
+/**
+ * Theme: default
+ */
+
+// Variables
+@import "../variables";
+@import "default/colors";
+
+// Commons styles
+@import "default/styles";
+
+// Light theme (Default)
+// Can be forced with data-theme="light"
+@import "default/light";
+
+// Dark theme (Auto)
+// Automatically enabled if user has Dark mode enabled
+@import "default/dark";
+
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    @include dark;
+  }
+}
+
+// Dark theme (Forced)
+// Enabled if forced with data-theme="dark"
+[data-theme="dark"] {
+  @include dark;
+
+  a#mode {
+    .mode-moon {
+      display: none;
+    }
+
+    .mode-sunny {
+      display: block;
+    }
+  }
+}
+
+// Accent-color
+progress,
+[type="checkbox"],
+[type="radio"],
+[type="range"] {
+  accent-color: var(--primary);
+}
+
+.h1 {
+  font-size: clamp(1rem, -6.7586rem + 24.8276vw, 10rem);
+  color: transparent;
+  font-weight: bold;
+  position: relative;
+  background-image: linear-gradient(90deg, var(--clip-text-color-1), var(--clip-text-color-2), var(--clip-text-color-3));
+  background-clip: text;
+  -webkit-background-clip: text;
+}

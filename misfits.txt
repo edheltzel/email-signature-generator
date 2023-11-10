@@ -1,5 +1,0 @@
-.git/
-.DS_Store
-liftoff
-misfits.txt
-README.md

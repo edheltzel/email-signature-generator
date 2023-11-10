@@ -1,0 +1,18 @@
+/* TEAM */
+
+Main Developer: Ed Heltzel
+Github: @edheltzel
+
+/* SITE */
+
+Last Updated: September 2023
+Software: Jamstack, Flightdeck + Eleventy
+
+/* THANKS */
+
+Special thanks for using Flightdeck.
+
+/* SUPPORT */
+
+If you have any questions, feedback, or bug reports, please one a issue on Github.
+Issues: https://github.com/edheltzel/flightdeck-for-11ty/issues

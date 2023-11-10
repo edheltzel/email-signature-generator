@@ -1,0 +1,85 @@
+{% extends "./default.njk" %}
+{% block main %}
+
+  {% block email_gen %}
+    <section class="generator">
+      <header class="title">
+        <h1 class="main-title">{{ site.title }}
+          {{ site.description }}</h1>
+        <p>Fill in the form to generate your signature and then click the Copy to Clipboard button.</p>
+      </header>
+
+      <div class="grid">
+
+        <section class="form">
+          <label for="nameInput">Full Name</label>
+          <input name="name" id="nameInput" type="text" value="" placeholder="Full name"></input>
+          <br>
+          <label for="titleInput">Title</label>
+          <input name="name" id="titleInput" type="text" value="" placeholder="Job title"></input>
+          <br>
+          <label for="phoneInput">Phone</label>
+          <input name="phone" id="phoneInput" type="text" value="" placeholder="XXX XXX XXX"></input>
+          <label for="emailInput">E-mail</label>
+          <input name="email" id="emailInput" type="email" value="" placeholder="Email"></input>
+          <br>
+
+        </section>
+
+        {% block signature %}
+          <section class="signature" id="signature">
+
+            <table width="600" cellspacing="0" cellpadding="0" border="0" style="font-size:13px;font-weight: 500; font-family: system-ui, sans-serif;";>
+              <tbody>
+                <tr>
+                  <p style="font-family: system-ui, sans-serif; ; font-size: 12px; line-height: 14px; color: rgb(158, 158, 158);">—</p>
+                  <td width="120" style="vertical-align:middle;">
+
+                    <a href="https://westonandassociates.com/" data-external="true" style="padding-left: 15px;">
+                      <img width="70%" style="border:none" src="https://cdn.westonandassociates.com/logo/logo-stacked.png">
+                    </a>
+                  </td>
+                  <td style="border-left:solid #d4d4d4 1px" width="16"></td>
+                  <td style="vertical-align: top; text-align:left;color:#0E172A; text-align:left">
+                    <span id="textName" style="display: block; padding-top: 20px; line-height:0px;color:#0E172A;font-size:16px; font-weight: bold;">Your Name</span>
+                    <br>
+                    <span id="textTitle" style="margin-bottom:16px;color:#0E172A;font-size:12px;">Your Job Title</span>
+                    <span style="margin-bottom:16px;color:#0E172A;font-size:12px;">&nbsp;&nbsp;–&nbsp;
+                      <a href="http://westonandassociates.com" data-external="true" style="text-transform: uppercase;text-decoration:none;color:#1363FD;font-size:12px">Weston & Associates LLC</a>
+                    </span>
+                    <br>
+                    <span style="display: inline-block; margin: 4px 0;color:#1363FD;font-size: .7rem;">e:&nbsp;
+                     <a href="mailto:youremail@westonandassociates.com" id="textEmail" style="color:#0E172A; font-size: .7rem">your-email@westonandassociates.com</a>&nbsp;&nbsp;&nbsp;t:&nbsp;
+                     <a href="tel:13307917118" id="textPhone" style="color:#0E172A; font-size: .7rem">330.791.7118</a>
+                      <a href="https://www.facebook.com/westonacllcc" data-external="true" style="text-decoration: none;">
+                        <img style="border:none; width: 12px; margin-left: .5rem" src="https://cdn.westonandassociates.com/email-signature/icon-facebook-32.png">
+                      </a>
+                      <a href="https://www.linkedin.com/company/weston-and-associates-llc/" data-external="true" style="text-decoration: none;">
+                        <img style="border:none; width: 12px;" src="https://cdn.westonandassociates.com/email-signature/icon-linkedin-32.png">
+                      </a>
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+        {% endblock signature %}
+      </div>
+      <br>
+      <section class="button-group">
+        <button class="copy-btn" onclick="copyToClip(document.getElementById('signature').innerHTML)">Copy to Clipboard</button>
+        <button id="reset" class="reset-btn">
+          <i class="fas fa-sync"></i> Reset Form</button>
+      </section>
+
+    </section>
+  {% endblock email_gen %}
+  <hr>
+  {% block content %}
+
+    {{ content | safe }}
+
+  {% endblock %}
+
+{% endblock %}
