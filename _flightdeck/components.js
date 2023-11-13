@@ -10,4 +10,5 @@ module.exports = (config) => {
   config.addShortcode("button", button);
   config.addShortcode("version", flightdeck.fdVersion);
   config.addShortcode("repo", flightdeck.fdUrl);
+  config.addShortcode("homepage", flightdeck.fdHomepage);
 };

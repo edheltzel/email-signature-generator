@@ -2,6 +2,7 @@
   "name": "flightdeck-for-eleventy",
   "version": "0.3.6",
   "author": "Ed Heltzel",
+  "homepage": "https://github.com/edheltzel/email-signature-generator",
   "repository": {
     "type": "git",
     "url": "https://github.com/edheltzel/flightdeck-for-11ty-esbuild"
