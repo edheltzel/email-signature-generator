@@ -33,6 +33,8 @@
     "start": "eleventy --serve",
     "build": "run-s clean build:11ty",
     "build:11ty": "cross-env ENV=production eleventy",
+    "deploy": "run-s clean build postBuild",
+    "postBuild": "wrangler pages deploy dist --project-name weston-email-signature-generator --commit-message \"🚀 Local deploy - pipeline issues with build, fallback to manual deployment\"",
     "preview": "npx http-server dist -p 4000",
     "clean": "./.scrub.sh site",
     "purge": "./.scrub.sh purge"
