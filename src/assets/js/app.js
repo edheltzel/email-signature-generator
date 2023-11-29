@@ -62,7 +62,7 @@ document.getElementById('popup').addEventListener('click', function(event) {
   popup.style.justifyContent = 'center';
   popup.style.alignItems = 'center';
 
-  var img = document.createElement('img');
+  const img = document.createElement('img');
   img.src = this.href;
   img.style.width = 'auto';
   img.style.objectFit = 'contain';
@@ -70,7 +70,7 @@ document.getElementById('popup').addEventListener('click', function(event) {
   popup.appendChild(img);
   document.body.appendChild(popup);
 
-  popup.addEventListener('click', function() {
+  popup.addEventListener('click', () => {
     document.body.removeChild(popup);
   });
 });
