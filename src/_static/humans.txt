@@ -5,7 +5,7 @@ Github: @edheltzel
 
 /* SITE */
 
-Last Updated: September 2023
+Last Updated: Dec 2023
 Software: Jamstack, Flightdeck + Eleventy
 
 /* THANKS */
