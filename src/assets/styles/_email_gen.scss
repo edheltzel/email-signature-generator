@@ -9,12 +9,12 @@
 
 body {
   padding: 2.5rem;
-  background: var(--gray);
   font-family: system-ui, sans-serif;
+  background-color: var(--gray);
   background-image: var(--bgImage);
 
   ::selection {
-    background: var(--secondary);
+    background: goldenrod;
     color: var(--gray);
   }
 }
