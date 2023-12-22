@@ -35,26 +35,26 @@
                   <p style="font-family: system-ui, sans-serif; ; font-size: 12px; line-height: 14px; color: rgb(158, 158, 158);">—</p>
                   <td width="120" style="vertical-align:middle;">
 
-                    <a href="https://westonandassociates.com/" data-external="true" style="padding-left: 15px;">
+                    <a href="https://{{ site.domain }}" data-external="true" style="padding-left: 15px;">
                       <img width="70%" style="border:none" src="https://cdn.westonandassociates.com/logo/logo-stacked.png">
                     </a>
                   </td>
                   <td style="border-left:solid #d4d4d4 1px" width="16"></td>
-                  <td style="vertical-align: top; text-align:left;color:#0E172A; text-align:left">
-                    <span id="textName" style="display: block; padding-top: 20px; line-height:0px;color:#0E172A;font-size:16px; font-weight: bold;">Your Name</span>
+                  <td style="vertical-align: top; text-align:left;color:var(--textColor); text-align:left">
+                    <span id="textName" style="display: block; padding-top: 20px; line-height:0px;color:var(--textColor);font-size:16px; font-weight: bold;">Your Name</span>
                     <br>
-                    <span id="textTitle" style="margin-bottom:16px;color:#0E172A;font-size:12px;">Your Job Title</span>
-                    <span style="margin-bottom:16px;color:#0E172A;font-size:12px;">&nbsp;&nbsp;–&nbsp;
-                      <a href="http://westonandassociates.com" data-external="true" style="text-transform: uppercase;text-decoration:none;color:#1363FD;font-size:12px">Weston & Associates LLC</a>
+                    <span id="textTitle" style="margin-bottom:16px;color:var(--textColor);font-size:12px;">Your Job Title</span>
+                    <span style="margin-bottom:16px;color:var(--textColor);font-size:12px;">&nbsp;&nbsp;–&nbsp;
+                      <a href="http://{{ site.domain }}" data-external="true" style="text-transform: uppercase;text-decoration:none;color:var(--primary);font-size:12px">Weston & Associates LLC</a>
                     </span>
                     <br>
-                    <span style="display: inline-block; margin: 4px 0;color:#1363FD;font-size: .7rem;">e:&nbsp;
-                     <a href="mailto:youremail@westonandassociates.com" id="textEmail" style="color:#0E172A; font-size: .7rem">your-email@westonandassociates.com</a>&nbsp;&nbsp;&nbsp;t:&nbsp;
-                     <a href="tel:13307917118" id="textPhone" style="color:#0E172A; font-size: .7rem">330.791.7118</a>
-                      <a href="https://www.facebook.com/westonacllcc" data-external="true" style="text-decoration: none;">
+                    <span style="display: inline-block; margin: 4px 0;color:var(--primary);font-size: .7rem;">e:&nbsp;
+                     <a href="mailto:youremail@westonandassociates.com" id="textEmail" style="color:var(--textColor); font-size: .7rem">your-email@westonandassociates.com</a>&nbsp;&nbsp;&nbsp;t:&nbsp;
+                     <a href="tel:13307917118" id="textPhone" style="color:var(--textColor); font-size: .7rem">330.791.7118</a>
+                      <a href="https://www.facebook.com/{{ site.social.facebook }}" data-external="true" style="text-decoration: none;">
                         <img style="border:none; width: 12px; margin-left: .5rem" src="https://cdn.westonandassociates.com/email-signature/icon-facebook-32.png">
                       </a>
-                      <a href="https://www.linkedin.com/company/weston-and-associates-llc/" data-external="true" style="text-decoration: none;">
+                      <a href="https://www.linkedin.com/company/{{ site.social.linkedin }}" data-external="true" style="text-decoration: none;">
                         <img style="border:none; width: 12px;" src="https://cdn.westonandassociates.com/email-signature/icon-linkedin-32.png">
                       </a>
                     </span>
@@ -68,7 +68,8 @@
       </div>
       <br>
       <section class="button-group">
-        <button class="copy-btn" onclick="copyToClip(document.getElementById('signature').innerHTML)"><i class="fas fa-copy"></i> Copy to Clipboard</button>
+        <button class="copy-btn" onclick="copyToClip(document.getElementById('signature').innerHTML)">
+          <i class="fas fa-copy"></i> Copy to Clipboard</button>
         <button id="reset" class="reset-btn">
           <i class="fas fa-sync"></i> Reset Form</button>
       </section>
