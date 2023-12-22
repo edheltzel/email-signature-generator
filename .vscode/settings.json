@@ -39,9 +39,5 @@
     "dist/**": true,
     "node_modules/": true,
     "package-lock.json": true
-  },
-  "workbench.colorCustomizations": {
-    "statusBar.foreground": "#000",
-    "statusBar.background": "#9ed5f9"
   }
 }
