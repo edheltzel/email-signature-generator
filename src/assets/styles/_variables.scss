@@ -1,10 +1,12 @@
 // Config
 // ––––––––––––––––––––
 :root {
-  --primary: #00A0FF;
+  --primary: #1363FD;
   --secondary: #333333;
   --gray: #eeeeee;
   --white: #ffffff;
+  --textColor: #0E172A;
+
   --spacing: 1rem;
   --details-padding: 1rem;
 
@@ -40,7 +42,7 @@ $breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-) !default;
+  ) !default;
 
 // Viewports
 $viewports: (
@@ -48,5 +50,4 @@ $viewports: (
   sm: 510px,
   md: 700px,
   lg: 920px,
-  xl: 1130px
-) !default;
+  xl: 1130px) !default;
